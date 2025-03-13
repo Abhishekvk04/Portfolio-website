@@ -82,3 +82,48 @@
 }
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+@layer base {
+  body {
+    @apply font-sans m-0 p-0 min-h-screen;
+  }
+  
+  .dark {
+    @apply bg-gradient-to-r from-[#1a2a3a] to-[#0c1620] text-dark-textPrimary;
+  }
+  
+  .light {
+    @apply bg-light-bg text-light-textPrimary;
+  }
+  
+  a {
+    @apply text-accent-primary no-underline transition-colors duration-300;
+  }
+  
+  a:hover {
+    @apply text-accent-secondary;
+  }
+}
+
+@layer components {
+  .skill-bar-bg {
+    @apply h-2 bg-opacity-10 bg-white rounded-full overflow-hidden mt-2;
+  }
+  
+  .skill-bar-fill {
+    @apply h-full rounded-full transition-all duration-1000 ease-out;
+  }
+  
+  .experience-item {
+    @apply pb-4 border-b border-opacity-10 border-accent-primary;
+  }
+  
+  .experience-item:last-child {
+    @apply border-b-0;
+  }
+}
