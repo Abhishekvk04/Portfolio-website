@@ -1,3 +1,4 @@
+//App.js
 import React, { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import profilePhoto from './Assests/abhi.png';
 import { IconButton, Button, Card, CardContent, Typography, Fab, TextField, Grid, Box } from '@mui/material';
@@ -800,10 +801,11 @@ function App() {
               path="/projects" 
               element={
                 <Suspense fallback={<div className="text-center py-8 text-cyan-400">Loading...</div>}>
-                  <Projects />
+                  <Projects theme={theme} />
                 </Suspense>
               } 
             />
+
           </Routes>
           <motion.div
             className="fixed bottom-6 right-6 z-50"
