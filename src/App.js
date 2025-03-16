@@ -663,30 +663,32 @@ const AboutMe = ({ theme }) => {
                 I'm a <span className={`font-semibold ${theme === 'dark' ? 'text-amber-400' : 'text-cyan-600'}`}>Data Science and AI student</span> at Ramaiah Institute of Technology, Bengaluru with a passion for creating innovative digital experiences. My journey in tech has equipped me with a strong foundation in:
               </p>
               
-              <div className="grid grid-cols-2 gap-3 my-4">
-                {[
-                  { icon: "💻", text: "Web Development" },
-                  { icon: "🤖", text: "AI Applications" },
-                  { icon: "📊", text: "Data Analysis" },
-                  { icon: "📱", text: "Mobile Development" }
-                ].map((item, index) => (
-                  <motion.div 
-                    key={index}
-                    className={`flex items-center p-3 rounded-lg ${
-                      theme === 'dark' 
-                        ? 'bg-gray-800/50 hover:bg-gray-800/70' 
-                        : 'bg-white hover:bg-gray-100 shadow-sm'
-                    } transition-all duration-300`}
-                    whileHover={{ scale: 1.03 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
-                  >
-                    <span className={`text-2xl mr-3 ${theme === 'dark' ? 'text-amber-400' : 'text-cyan-600'}`}>{item.icon}</span>
-                    <span className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'} font-medium`}>{item.text}</span>
-                  </motion.div>
-                ))}
-              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
+  {[
+    { icon: "💻", text: "Web Development" },
+    { icon: "🤖", text: "AI Applications" },
+    { icon: "📊", text: "Data Analysis" },
+    { icon: "📱", text: "Mobile Development" }
+    // Replace these with your actual skills from your CV
+  ].map((item, index) => (
+    <motion.div 
+      key={index}
+      className={`flex items-center p-3 rounded-lg ${
+        theme === 'dark' 
+          ? 'bg-gray-800/50 hover:bg-gray-800/70' 
+          : 'bg-white hover:bg-gray-100 shadow-sm'
+      } transition-all duration-300`}
+      whileHover={{ scale: 1.03 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
+    >
+      <span className={`text-2xl mr-3 ${theme === 'dark' ? 'text-amber-400' : 'text-cyan-600'}`}>{item.icon}</span>
+      <span className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'} font-medium`}>{item.text}</span>
+    </motion.div>
+  ))}
+</div>
+
               
               <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 I've led projects that enhance user experience and contributed to award-winning solutions like the <span className={`font-semibold ${theme === 'dark' ? 'text-amber-400' : 'text-cyan-600'}`}>AI Stock Trading Platform</span> which won 1st Place at the Enigma Hackathon. My goal is to leverage my skills in a dynamic organization where I can continue to grow and make an impact.
